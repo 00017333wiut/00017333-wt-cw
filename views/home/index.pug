@@ -11,10 +11,10 @@ body
           tr
             th(scope="col") ID
             th(scope="col") Product Name
-            th(scope="col") Product DateTime
-            th(scope="col") Venue
+            th(scope="col") Product Manufacture Date
+            th(scope="col") Farm
             th(scope="col") Contact Phone
-            th(scope="col") Seat
+            th(scope="col") Price
             th(scope="col") Actions
         tbody
 script.
@@ -29,9 +29,9 @@ script.
           <td>${t.id}</td>
           <td>${ticket.productName}</td>
           <td>${ticket.productDateTime}</td>
-          <td>${ticket.venue}</td>
+          <td>${ticket.farm}</td>
           <td>${ticket.contactPhone}</td>
-          <td>${ticket.seat}</td>
+          <td>${ticket.price}</td>
           <td>
             <button class="btn btn-primary btn-sm" data-id="${t.id}" onclick="window.location.href='/update/${t.id}'">Update</button>
             <button class="btn btn-danger btn-sm" data-id="${t.id}">Delete</button>

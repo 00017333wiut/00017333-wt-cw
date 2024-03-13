@@ -13,14 +13,14 @@ body
           .input-group-text
             i.fas.fa-calendar-alt
     .mb-3
-      label(for="venue" class="form-label") Venue
-      input(type="text" class="form-control" id="venue" name="venue" required)
+      label(for="farm" class="form-label") Farm
+      input(type="text" class="form-control" id="farm" name="farm" required)
     .mb-3
       label(for="contactPhone" class="form-label") Contact Phone
       input(type="tel" class="form-control" id="contactPhone" name="contactPhone" required)
     .mb-3
-      label(for="seat" class="form-label") Seat
-      input(type="text" class="form-control" id="seat" name="seat" required)
+      label(for="price" class="form-label") Price
+      input(type="text" class="form-control" id="price" name="price" required)
     button(type="submit" class="btn btn-success" onclick="submitForm()") #{mode === 'Update' ? 'Update' : 'Add'}
     span &nbsp;
     button(type="submit" class="btn btn-primary" onclick="window.location.href='/'") Back to list
@@ -44,18 +44,18 @@ body
         new tempusDominus.DateTime(moment(productData.productDateTime, format))
       );
 
-      document.getElementById('venue').value = productData.venue || '';
+      document.getElementById('farm').value = productData.farm || '';
       document.getElementById('contactPhone').value = productData.contactPhone || '';
-      document.getElementById('seat').value = productData.seat || '';
+      document.getElementById('price').value = productData.price || '';
     }
 
     function submitForm() {
       const productData = {
         productName: document.getElementById('productName').value,
         productDateTime: document.getElementById('productDateTime').value,
-        venue: document.getElementById('venue').value,
+        farm: document.getElementById('farm').value,
         contactPhone: document.getElementById('contactPhone').value,
-        seat: document.getElementById('seat').value,
+        price: document.getElementById('price').value,
       };
 
       const url = "#{mode}" === "Update" ? `/api/ticket/${!{JSON.stringify(productData || {})}.id}` : '/api/ticket';

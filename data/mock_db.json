@@ -4,9 +4,9 @@
         "ticket": {
             "productName": "awdawdawda",
             "productDateTime": "13/03/2024 17:29",
-            "venue": "awdaw",
-            "contactPhone": "+998998728789",
-            "seat": "awdaw"
+            "farm": "awdaw",
+            "contactPhone": "+998998728780",
+            "price": "awdaw"
         }
     },
     {
@@ -14,9 +14,49 @@
         "ticket": {
             "productName": "adawdawdawd",
             "productDateTime": "13/03/2024 17:35",
-            "venue": "awdawdawd",
+            "farm": "awdawdawd",
             "contactPhone": "+998998728789",
-            "seat": "awd"
+            "price": "1313"
+        }
+    },
+    {
+        "id": "dAvp",
+        "ticket": {
+            "productName": "awda",
+            "productDateTime": "13/03/2024 18:39",
+            "farm": "adwadawd",
+            "contactPhone": "+998998728789",
+            "price": "242342"
+        }
+    },
+    {
+        "id": "be05bafb-7060-4ea9-8ac5-9220dc002b97",
+        "ticket": {
+            "productName": "adawdawdawd",
+            "productDateTime": "03/01/2025 17:35",
+            "farm": "adwadawd",
+            "contactPhone": "+998998728789",
+            "price": "242342"
+        }
+    },
+    {
+        "id": "RnU",
+        "ticket": {
+            "productName": "adawdawdawd",
+            "productDateTime": "13/03/2024 23:13",
+            "farm": "adwadawd",
+            "contactPhone": "+998998728789",
+            "price": "242342"
+        }
+    },
+    {
+        "id": "db6bd7b6-d075-4751-ba54-e0cd74cfe49a",
+        "ticket": {
+            "productName": "adawdawdawd",
+            "productDateTime": "13/03/2024 23:28",
+            "farm": "adwadawd",
+            "contactPhone": "+998998728789",
+            "price": "242342"
         }
     }
 ]
