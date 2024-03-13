@@ -2,11 +2,21 @@
     {
         "id": "so3j",
         "ticket": {
-            "eventName": "awdawdawda",
-            "eventDateTime": "13/03/2024 17:29",
+            "productName": "awdawdawda",
+            "productDateTime": "13/03/2024 17:29",
             "venue": "awdaw",
             "contactPhone": "+998998728789",
             "seat": "awdaw"
+        }
+    },
+    {
+        "id": "pmYT",
+        "ticket": {
+            "productName": "adawdawdawd",
+            "productDateTime": "13/03/2024 17:35",
+            "venue": "awdawdawd",
+            "contactPhone": "+998998728789",
+            "seat": "awd"
         }
     }
 ]

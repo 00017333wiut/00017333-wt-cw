@@ -3,12 +3,12 @@ body
   .container.mt-5
     h1 #{mode}
     .mb-3
-      label(for="eventName" class="form-label") Event Name
-      input(type="text" class="form-control" id="eventName" name="eventName" required)
+      label(for="productName" class="form-label") Product Name
+      input(type="text" class="form-control" id="productName" name="productName" required)
     .mb-3
-      label(for="eventDateTime" class="form-label") Event Date/Time
+      label(for="productDateTime" class="form-label") Product Date/Time
       .input-group.date(id="datetimepicker1" data-target-input="nearest")
-        input(type="text" class="form-control datetimepicker-input" data-target="#datetimepicker1" id="eventDateTime" name="eventDateTime" required)
+        input(type="text" class="form-control datetimepicker-input" data-target="#datetimepicker1" id="productDateTime" name="productDateTime" required)
         .input-group-append(data-target="#datetimepicker1" data-toggle="datetimepicker")
           .input-group-text
             i.fas.fa-calendar-alt
@@ -37,31 +37,31 @@ body
     }
 
     if ("#{mode}" === "Update") {
-      const eventData = !{JSON.stringify(eventData || {})}.ticket;
-      document.getElementById('eventName').value = eventData.eventName || '';
+      const productData = !{JSON.stringify(productData || {})}.ticket;
+      document.getElementById('productName').value = productData.productName || '';
 
       picker.dates.setValue(
-        new tempusDominus.DateTime(moment(eventData.eventDateTime, format))
+        new tempusDominus.DateTime(moment(productData.productDateTime, format))
       );
 
-      document.getElementById('venue').value = eventData.venue || '';
-      document.getElementById('contactPhone').value = eventData.contactPhone || '';
-      document.getElementById('seat').value = eventData.seat || '';
+      document.getElementById('venue').value = productData.venue || '';
+      document.getElementById('contactPhone').value = productData.contactPhone || '';
+      document.getElementById('seat').value = productData.seat || '';
     }
 
     function submitForm() {
-      const eventData = {
-        eventName: document.getElementById('eventName').value,
-        eventDateTime: document.getElementById('eventDateTime').value,
+      const productData = {
+        productName: document.getElementById('productName').value,
+        productDateTime: document.getElementById('productDateTime').value,
         venue: document.getElementById('venue').value,
         contactPhone: document.getElementById('contactPhone').value,
         seat: document.getElementById('seat').value,
       };
 
-      const url = "#{mode}" === "Update" ? `/api/ticket/${!{JSON.stringify(eventData || {})}.id}` : '/api/ticket';
+      const url = "#{mode}" === "Update" ? `/api/ticket/${!{JSON.stringify(productData || {})}.id}` : '/api/ticket';
       const method = "#{mode}" === "Update" ? 'put' : 'post';
 
-      axios[method](url, eventData).then(response => {
+      axios[method](url, productData).then(response => {
         alert('Success!');
         location.href = '/'
       })

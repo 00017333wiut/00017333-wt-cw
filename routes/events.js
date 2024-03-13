@@ -1,24 +1,24 @@
 const express = require('express');
 const router = express.Router();
 
-// Event model
-const Event = require('../models/Event');
+// Product model
+const Product = require('../models/Product');
 
-// GET all events
+// GET all products
 router.get('/', (req, res) => {
-  Event.find()
-    .then((events) => res.json(events))
+  Product.find()
+    .then((produts) => res.json(products))
     .catch((err) => res.status(400).json('Error: ' + err));
 });
 
-// POST a new event
+// POST a new product
 router.post('/', (req, res) => {
   const { title, date, location, description } = req.body;
-  const newEvent = new Event({ title, date, location, description });
+  const newProduct = new Product({ title, date, location, description });
 
-  newEvent
+  newProduct
     .save()
-    .then(() => res.json('Event added'))
+    .then(() => res.json('Product added'))
     .catch((err) => res.status(400).json('Error: ' + err));
 });
 
