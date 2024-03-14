@@ -42,7 +42,7 @@ Links
 --------
 Public GitHub Repo: https://github.com/00017333wiut/00017333-wt-cw
 
-Hosted Application: 
+Hosted Application: I couldn't deploy my website to AWS as the registration process requires VISA/MasterCard number which i don't have.
 
 Project Structure
 --------
