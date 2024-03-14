@@ -3,7 +3,7 @@ body
     .container.mt-5
       .row.d-flex.align-items-center
         .col-md-6
-          h1 List
+          h1 Local Farmers Market
         .col-md-6.text-end
           a.btn.btn-success(href='/add', role='button') Add      
       table.table.table-responsive.table-hover.table-striped.table-dark
@@ -13,7 +13,6 @@ body
             th(scope="col") Product Name
             th(scope="col") Product Manufacture Date
             th(scope="col") Farm
-            th(scope="col") Contact Phone
             th(scope="col") Price
             th(scope="col") Actions
         tbody
@@ -30,11 +29,11 @@ script.
           <td>${ticket.productName}</td>
           <td>${ticket.productDateTime}</td>
           <td>${ticket.farm}</td>
-          <td>${ticket.contactPhone}</td>
           <td>${ticket.price}</td>
           <td>
-            <button class="btn btn-primary btn-sm" data-id="${t.id}" onclick="window.location.href='/update/${t.id}'">Update</button>
+            
             <button class="btn btn-danger btn-sm" data-id="${t.id}">Delete</button>
+            <button class="btn btn-primary btn-sm" data-id="${t.id}" onclick="window.location.href='/update/${t.id}'">Update</button>
           </td>
         `;
         tableBody.appendChild(row);
@@ -44,10 +43,12 @@ script.
       console.log(error);
     });
 
-    // Use product delegation for delete buttons
+
+
+    // Use event delegation for delete buttons
     document.addEventListener('click', function(event) {
-      if (product.target && product.target.classList.contains('btn-danger')) {
-        const ticketId = product.target.getAttribute('data-id');
+      if (event.target && event.target.classList.contains('btn-danger')) {
+        const ticketId = event.target.getAttribute('data-id');
         axios.delete(`/api/ticket/${ticketId}`).then(function(response) {
           alert('Deleted successfully', response);
           location.href = '/'

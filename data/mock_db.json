@@ -1,62 +1,38 @@
 [
     {
-        "id": "so3j",
+        "id": "a3eee655-51fc-4939-9d8c-6a4b834a6488",
         "ticket": {
-            "productName": "awdawdawda",
-            "productDateTime": "13/03/2024 17:29",
-            "farm": "awdaw",
-            "contactPhone": "+998998728780",
-            "price": "awdaw"
+            "productName": "Apple",
+            "productDateTime": "04/03/2024 23:57",
+            "farm": "Stardew",
+            "price": "5"
         }
     },
     {
-        "id": "pmYT",
+        "id": "97cdb3c3-419c-4e37-abc0-37f690d1bcac",
         "ticket": {
-            "productName": "adawdawdawd",
-            "productDateTime": "13/03/2024 17:35",
-            "farm": "awdawdawd",
-            "contactPhone": "+998998728789",
-            "price": "1313"
+            "productName": "Milk",
+            "productDateTime": "04/03/2024 13:03",
+            "farm": "Blue Moon",
+            "price": "10"
         }
     },
     {
-        "id": "dAvp",
+        "id": "cb951e35-f740-4550-b8ff-c7f2dff74d3e",
         "ticket": {
-            "productName": "awda",
-            "productDateTime": "13/03/2024 18:39",
-            "farm": "adwadawd",
-            "contactPhone": "+998998728789",
-            "price": "242342"
+            "productName": "Cherries",
+            "productDateTime": "09/05/2024 13:04",
+            "farm": "Tulips",
+            "price": "15"
         }
     },
     {
-        "id": "be05bafb-7060-4ea9-8ac5-9220dc002b97",
+        "id": "c6189582-e43a-4ed8-a873-41a52028aa9d",
         "ticket": {
-            "productName": "adawdawdawd",
-            "productDateTime": "03/01/2025 17:35",
-            "farm": "adwadawd",
-            "contactPhone": "+998998728789",
-            "price": "242342"
-        }
-    },
-    {
-        "id": "RnU",
-        "ticket": {
-            "productName": "adawdawdawd",
-            "productDateTime": "13/03/2024 23:13",
-            "farm": "adwadawd",
-            "contactPhone": "+998998728789",
-            "price": "242342"
-        }
-    },
-    {
-        "id": "db6bd7b6-d075-4751-ba54-e0cd74cfe49a",
-        "ticket": {
-            "productName": "adawdawdawd",
-            "productDateTime": "13/03/2024 23:28",
-            "farm": "adwadawd",
-            "contactPhone": "+998998728789",
-            "price": "242342"
+            "productName": "Orange Jam",
+            "productDateTime": "21/03/2024 13:05",
+            "farm": "Eternal Darkness",
+            "price": "100"
         }
     }
 ]

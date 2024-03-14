@@ -12,10 +12,7 @@ const addTicketValidation = () => {
         .withMessage('Invalid date and time format. Please use "DD/MM/YYYY HH:mm" format.'),
     body('farm')
       .notEmpty().withMessage('Product farm must not be empty'),
-    body('contactPhone')
-      .notEmpty().withMessage('Contact phone must not be empty')
-      .matches(/^\+998\d{9}$/).withMessage('Invalid phone number format, it must be +998xxxxxxxxx'),
-      body('price')
+    body('price')
       .notEmpty().withMessage('Price must not be empty')
       .isNumeric().withMessage('Price must be a number')      
    ];
@@ -49,9 +46,6 @@ const updateTicketValidation = () => {
         .withMessage('Invalid date and time format. Please use "DD/MM/YYYY HH:mm" format.'),
     body('farm')
       .notEmpty().withMessage('Product farm must not be empty'),
-    body('contactPhone')
-      .notEmpty().withMessage('Contact phone must not be empty')
-      .matches(/^\+998\d{9}$/).withMessage('Invalid phone number format, it must be +998xxxxxxxxx'),
     body('price')
       .notEmpty().withMessage('Price must not be empty'),      
   ];

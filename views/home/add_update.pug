@@ -16,14 +16,12 @@ body
       label(for="farm" class="form-label") Farm
       input(type="text" class="form-control" id="farm" name="farm" required)
     .mb-3
-      label(for="contactPhone" class="form-label") Contact Phone
-      input(type="tel" class="form-control" id="contactPhone" name="contactPhone" required)
-    .mb-3
       label(for="price" class="form-label") Price
       input(type="text" class="form-control" id="price" name="price" required)
-    button(type="submit" class="btn btn-success" onclick="submitForm()") #{mode === 'Update' ? 'Update' : 'Add'}
-    span &nbsp;
+    
     button(type="submit" class="btn btn-primary" onclick="window.location.href='/'") Back to list
+    span &nbsp;
+    button(type="submit" class="btn btn-success" onclick="submitForm()") #{mode === 'Update' ? 'Update' : 'Add'}
 
   script.
     const format = 'DD/MM/YYYY HH:mm'
@@ -45,7 +43,6 @@ body
       );
 
       document.getElementById('farm').value = productData.farm || '';
-      document.getElementById('contactPhone').value = productData.contactPhone || '';
       document.getElementById('price').value = productData.price || '';
     }
 
@@ -54,7 +51,6 @@ body
         productName: document.getElementById('productName').value,
         productDateTime: document.getElementById('productDateTime').value,
         farm: document.getElementById('farm').value,
-        contactPhone: document.getElementById('contactPhone').value,
         price: document.getElementById('price').value,
       };
 
